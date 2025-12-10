@@ -1,5 +1,6 @@
-import { Github, Linkedin, Twitter, Mail, Terminal } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import codrLogo from "@/assets/codr-logo.png";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/codr07", label: "GitHub" },
@@ -15,9 +16,9 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <Terminal className="w-5 h-5 text-primary" />
+            <img src={codrLogo} alt="CODR Logo" className="w-8 h-8 object-contain" />
             <span className="font-display text-lg text-primary tracking-wider">
-              SANKHA<span className="text-secondary">_</span>SAHA
+              CODR<span className="text-secondary">07</span>
             </span>
           </Link>
 
