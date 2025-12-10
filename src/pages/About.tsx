@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { SkillsSection } from "@/components/SkillsSection";
 import { MapPin, GraduationCap, Briefcase, Award, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const timeline = [
   {
@@ -48,8 +49,8 @@ const About = () => {
               {/* Profile Card */}
               <div className="lg:col-span-1">
                 <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm neon-border">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full border-2 border-primary bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                    <span className="font-display text-4xl text-primary">SS</span>
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary">
+                    <img src={profilePhoto} alt="Sankha Saha" className="w-full h-full object-cover" />
                   </div>
                   
                   <h2 className="font-display text-2xl font-bold text-center text-primary mb-2">

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Terminal } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import codrLogo from "@/assets/codr-logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -21,9 +22,9 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <Terminal className="w-6 h-6 text-primary group-hover:animate-pulse" />
+            <img src={codrLogo} alt="CODR Logo" className="w-10 h-10 object-contain" />
             <span className="font-display text-xl text-primary text-glow tracking-wider">
-              SANKHA<span className="text-secondary">_</span>SAHA
+              CODR<span className="text-secondary">07</span>
             </span>
           </Link>
 
