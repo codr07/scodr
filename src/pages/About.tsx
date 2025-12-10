@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SkillsSection } from "@/components/SkillsSection";
-import { GamingSection } from "@/components/about/GamingSection";
 import { ExperienceSection } from "@/components/about/ExperienceSection";
 import { EducationSection } from "@/components/about/EducationSection";
 import { CertificationsSection } from "@/components/about/CertificationsSection";
@@ -149,8 +148,6 @@ const About = () => {
         {/* Awards & Recommendations */}
         <AwardsSection />
 
-        {/* Gaming Section */}
-        <GamingSection />
       </main>
       <Footer />
     </div>
