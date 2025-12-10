@@ -250,16 +250,10 @@ export const awards = [
 
 export const recommendations = [
   {
-    name: "Tech Community Member",
-    title: "GDG Kolkata",
-    text: "Sankha is an exceptional developer with a deep understanding of ML systems. His contributions to our community were invaluable.",
-    avatar: "TC",
-  },
-  {
-    name: "Fellow Developer",
-    title: "Open Source Contributor",
-    text: "Working with Sankha was a pleasure. His technical skills combined with his ability to communicate complex ideas made him stand out.",
-    avatar: "FD",
+    name: "Kaustav Basu",
+    title: "Subject Matter Expert (Data Science), FACE Prep",
+    text: "I am pleased to recommend Sankha Saha, a remarkable data enthusiast whose skills and dedication have left a lasting impression on me. Sankha's deep understanding of coding and machine learning fundamentals and his ability to apply this knowledge practically is truly commendable.Sankha is not only a proficient expert in his domain but also a great team player who fosters a collaborative work environment.His commitment to excellence and continuous learning sets him apart, making him an invaluable asset to any team. I am confident that Sankha will continue to excel and make significant contributions wherever he goes.",
+    avatar: "KB",
   },
 ];
 

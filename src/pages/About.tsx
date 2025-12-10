@@ -117,7 +117,6 @@ const About = () => {
                       <p className="font-display text-3xl font-bold text-primary">10+</p>
                       <p className="text-sm text-muted-foreground">Certifications</p>
                     </div>
-                    
                   </div>
                 </div>
               </div>
