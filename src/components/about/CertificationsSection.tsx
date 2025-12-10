@@ -15,19 +15,8 @@ export const CertificationsSection = () => {
             {certifications.map((cert, index) => (
               <div 
                 key={index}
-                className="p-4 rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all group flex items-center gap-4"
+                className="p-4 rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all group"
               >
-                <div className="w-12 h-12 rounded-lg bg-muted/50 flex items-center justify-center overflow-hidden flex-shrink-0">
-                  <img 
-                    src={cert.logo} 
-                    alt={cert.issuer}
-                    className="w-8 h-8 object-contain"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
-                
                 <div className="flex-1 min-w-0">
                   <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors truncate">
                     {cert.name}
