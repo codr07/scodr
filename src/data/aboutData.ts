@@ -26,7 +26,6 @@ export const experience = [
     startDate: "January 2025",
     endDate: "Present",
     description: "Leading technical strategy and product development for innovative tech solutions.",
-    logo: "https://github.com/codr07/scodr/blob/main/src/assets/EspoZ%20Logo%20-%20Dark.svg",
   },
   {
     title: "Student Staff",
@@ -35,7 +34,6 @@ export const experience = [
     startDate: "March 2024",
     endDate: "Present",
     description: "Contributing to statistical education and research initiatives.",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Royal_Statistical_Society_Logo.svg/1200px-Royal_Statistical_Society_Logo.svg.png",
   },
   {
     title: "Developer",
@@ -44,7 +42,6 @@ export const experience = [
     startDate: "April 2024",
     endDate: "Present",
     description: "Building and learning cloud-native applications on Google Cloud Platform.",
-    logo: "https://www.gstatic.com/devrel-devsite/prod/v0e0f589edd85502a40d78d7d0825db8ea5ef3b99b7b071d7d7e5511cca5b5f62/cloud/images/favicons/onecloud/favicon.ico",
   },
   {
     title: "Developer",
