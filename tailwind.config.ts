@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         mono: ["JetBrains Mono", "monospace"],
         display: ["Orbitron", "sans-serif"],
+        rajdhani: ["Rajdhani", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,15 +52,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        neon: {
-          green: "hsl(var(--neon-green))",
-          blue: "hsl(var(--neon-blue))",
-          purple: "hsl(var(--neon-purple))",
-        },
-        dark: {
-          bg: "hsl(var(--dark-bg))",
-          card: "hsl(var(--dark-card))",
-          border: "hsl(var(--dark-border))",
+        valorant: {
+          red: "hsl(var(--valorant-red))",
+          "dark-red": "hsl(var(--valorant-dark-red))",
+          maroon: "hsl(var(--valorant-maroon))",
+          dark: "hsl(var(--valorant-dark))",
+          darker: "hsl(var(--valorant-darker))",
+          light: "hsl(var(--valorant-light))",
+          white: "hsl(var(--valorant-white))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

@@ -14,6 +14,7 @@ const navLinks = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const location = useLocation();
 
   return (
@@ -21,10 +22,26 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link 
+            to="/" 
+            className="flex items-center gap-2 group"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <img src={codrLogo} alt="CODR Logo" className="w-10 h-10 object-contain" />
-            <span className="font-display text-xl text-primary text-glow tracking-wider">
-              CODR<span className="text-secondary">07</span>
+            <span className="font-display text-xl text-primary text-glow tracking-wider relative overflow-hidden">
+              <span className={cn(
+                "inline-block transition-all duration-500",
+                isHovered ? "opacity-0 -translate-y-full" : "opacity-100 translate-y-0"
+              )}>
+                Sankha Saha
+              </span>
+              <span className={cn(
+                "absolute left-0 top-0 transition-all duration-500",
+                isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
+              )}>
+                CODR<span className="text-secondary">®</span>
+              </span>
             </span>
           </Link>
 
