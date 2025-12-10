@@ -163,11 +163,7 @@ export const GamingSection = () => {
                           }}
                         >
                           <div className="text-center">
-                            {rank.season && (
-                              <span className="text-[9px] text-muted-foreground font-mono block mb-0.5">
-                                S{rank.season}
-                              </span>
-                            )}
+                            
                             <span 
                               className="font-rajdhani font-bold text-[11px] block leading-tight"
                               style={{ color: rankColor }}
