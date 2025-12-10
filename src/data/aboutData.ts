@@ -176,23 +176,65 @@ export const certifications = [
 
 export const projects = [
   {
-    name: "GitHub Portfolio",
-    description: "Open source projects and contributions showcasing full-stack development skills.",
-    link: "https://github.com/codr07",
-    technologies: ["Python", "JavaScript", "React", "Node.js"],
+    name: "Stock Data Analysis",
+    description: "Comprehensive analysis and visualization of stock market data of 4 MNC companies.",
+    link: "https://github.com/codr07/stock-data-analysis",
+    technologies: ["Python"],
   },
   {
-    name: "CODR Academy Platform",
-    description: "Ed-tech platform for coding education and mentorship.",
-    link: "https://github.com/codr07",
-    technologies: ["MERN Stack", "Next.js", "MongoDB"],
+    name: "Project Euler Solutions",
+    description: "Solutions to various mathematical and computational problems from Project Euler.",
+    link: "https://github.com/codr07/Project-Euler-Solusions",
+    technologies: ["Python", "C", "C++", "C#","Go", "Haskell",  "Java", "JavaScript", "Julia","Kotlin", "Mathematica", "Ruby", "Rust", "Swift"],
   },
   {
-    name: "Data Analytics Projects",
+    name: "HackerRank Solutions",
     description: "Various data science and analytics projects using Power BI, Python, and R.",
-    link: "https://github.com/codr07",
-    technologies: ["Python", "Power BI", "R", "MatLab"],
+    link: "https://github.com/codr07/Hackerrank-Solutions",
+    technologies: ["Python"],
   },
+  {
+    name: "Cloud Blazers Penetration Testing Tool",
+    description: "● Scan a large range of addresses ● Utilize multiple VMs in parallel reducing scan time and analysis ● Require authentication using cloud database technologies ● Expose vulnerabilities associated with the network (ports, OS, etc) ● Mitigation tool for developers to slow down the attacker",
+    link: "https://github.com/codr07/CBPen",
+    technologies: ["Python", "HTML"],
+  },
+  {
+    name: "Personal Portfolio Website",
+    description: "A personal portfolio website to showcase my projects, skills, and experience.",
+    link: "",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    name: "EasyC",
+    description: "An online learning platform to learn C programming from basics to advanced level.",
+    link: "https://codr07.github.io/EasyC",
+    technologies: ["JavaScript", "PHP", "CSS", "SCSS", "Less", "HTML"],
+  },
+  {
+    name: "Advanced Portfolio Designs",
+    description: "Collection of advanced portfolio website designs with modern UI/UX principles.",
+    link: "https://github.com/codr07/advanced-portfolio-designs",
+    technologies: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name:"Bangla",
+    description: "A system language that will change your system language to Bengali.",
+    link: "https://github.com/codr07/bangla",
+    technologies: ["Python"],
+  },
+  {
+    name: "Milk Product Forcasting",
+    description: "A machine learning model to forecast milk production using historical data.",
+    link: "https://github.com/codr07/milk-prod-forecasting",
+    technologies: ["Python" , "Jupyter Notebook"], 
+  },
+  {
+    name:"Ex-Tra-Telegram-Bot",
+    description: "A telegram bot",
+    link: "https://github.com/codr07/Ex-Tra-Telegram",
+    technologies: ["Python"],
+  }
 ];
 
 export const skills = {
