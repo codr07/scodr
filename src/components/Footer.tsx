@@ -6,7 +6,7 @@ const socialLinks = [
   { icon: Github, href: "https://github.com/codr07", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com/in/sankhasaha", label: "LinkedIn" },
   { icon: Twitter, href: "https://twitter.com/SankhaSaha6", label: "Twitter" },
-  { icon: Mail, href: "mailto:contact@sankhasaha.dev", label: "Email" },
+  { icon: Mail, href: "mailto:codr.sankha.contact@gmail.com", label: "Email" },
 ];
 
 export const Footer = () => {
@@ -18,7 +18,7 @@ export const Footer = () => {
           <Link to="/" className="flex items-center gap-2 group">
             <img src={codrLogo} alt="CODR Logo" className="w-8 h-8 object-contain" />
             <span className="font-display text-lg text-primary tracking-wider">
-              CODR<span className="text-secondary">07</span>
+              Sankha Saha
             </span>
           </Link>
 
@@ -40,7 +40,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <p className="font-mono text-xs text-muted-foreground">
-            <span className="text-primary">&copy;</span> {new Date().getFullYear()} | Built with{" "}
+            <span className="text-primary">&copy;</span> {new Date().getFullYear()} Sankha Saha | Built with{" "}
             <span className="text-secondary">&lt;/&gt;</span> in Bengaluru
           </p>
         </div>

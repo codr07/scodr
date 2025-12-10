@@ -20,7 +20,7 @@ export interface GameProfile {
 export const gamingProfiles: GameProfile[] = [
   {
     name: "VALORANT",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg",
+    logo: "https://cdn.vectorstock.com/i/1000v/37/87/valorant-logo-icon-gaming-streamer-vector-33193787.jpg",
     investment: "₹20,000",
     playHours: "400+ hrs",
     started: "October 21, 2021",
@@ -48,7 +48,7 @@ export const gamingProfiles: GameProfile[] = [
   },
   {
     name: "Counter-Strike 2",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Counter-Strike_2_%28CS2%29.svg",
+    logo: "https://static.wikia.nocookie.net/logopedia/images/4/49/Counter-Strike_2_%28Icon%29.png",
     investment: "₹60,000",
     playHours: "4000 hrs",
     started: "August 17, 2020",
@@ -78,7 +78,7 @@ export const gamingProfiles: GameProfile[] = [
   },
   {
     name: "Call of Duty Mobile",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Call_of_Duty_Mobile_icon.svg",
+    logo: "https://www.pngarts.com/files/8/Call-of-Duty-Mobile-Logo-PNG-Image-Background.png",
     investment: "₹30,000",
     playHours: "N/A",
     started: "July 17, 2019",
@@ -100,7 +100,7 @@ export const gamingProfiles: GameProfile[] = [
   },
   {
     name: "FIFA Mobile",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/aa/FIFA_logo_without_slogan.svg",
+    logo: "https://sm.ign.com/ign_in/cover/e/ea-sports-/ea-sports-fc-mobile_wwtq.jpg",
     investment: "N/A",
     playHours: "N/A",
     started: "February 2017",
@@ -118,8 +118,8 @@ export const gamingProfiles: GameProfile[] = [
     ],
   },
   {
-    name: "eFootball (PES Mobile)",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/31/EFootball_logo.svg",
+    name: "eFootball",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/EFootball_2022_logo_colored.svg/2048px-EFootball_2022_logo_colored.svg.png",
     investment: "N/A",
     playHours: "N/A",
     started: "March 2016",
