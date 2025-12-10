@@ -26,7 +26,7 @@ export const experience = [
     startDate: "January 2025",
     endDate: "Present",
     description: "Leading technical strategy and product development for innovative tech solutions.",
-    logo: "https://media.licdn.com/dms/image/v2/D560BAQE3RNWkwVQlZA/img-crop_100/img-crop_100/0/1735845777993?e=1767225600&v=beta&t=rhtBsebm-yee1uB7_6F8rMwjNZIiKnxKomQBELvC9kA",
+    logo: "https://espoz.com/assets/images/espoz-logo.png",
   },
   {
     title: "Student Staff",
