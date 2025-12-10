@@ -22,11 +22,11 @@ export const gamingProfiles: GameProfile[] = [
     name: "VALORANT",
     logo: "https://cdn.vectorstock.com/i/1000v/37/87/valorant-logo-icon-gaming-streamer-vector-33193787.jpg",
     investment: "₹20,000",
-    playHours: "400+ hrs",
+    playHours: "4000+ hrs",
     started: "October 21, 2021",
     currentStatus: "Regular",
     ranks: [
-      { rank: "Silver 2", season: 1 },
+      { rank: "Silver 2"},
       { rank: "Silver 3", season: 2 },
       { rank: "Gold 3", season: 3 },
       { rank: "Platinum 2", season: 4 },
