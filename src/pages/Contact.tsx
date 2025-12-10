@@ -12,7 +12,7 @@ const socialLinks = [
   { icon: Github, href: "https://github.com/codr07", label: "GitHub", username: "@codr07" },
   { icon: Linkedin, href: "https://linkedin.com/in/sankhasaha", label: "LinkedIn", username: "sankhasaha" },
   { icon: Twitter, href: "https://twitter.com/SankhaSaha6", label: "Twitter", username: "@SankhaSaha6" },
-  { icon: Mail, href: "mailto:contact@sankhasaha.dev", label: "Email", username: "contact@sankhasaha.dev" },
+  { icon: Mail, href: "mailto:codr.sankha.contact@gmail.com", label: "Email", username: "codr.sankha.contact@gmail.com" },
 ];
 
 const Contact = () => {

@@ -36,7 +36,7 @@ export const ContactCTA = () => {
               </Link>
             </Button>
             <Button asChild variant="neon-blue" size="xl">
-              <a href="mailto:contact@sankhasaha.dev">
+              <a href="mailto:codr.sankha.contact@gmail.com">
                 <Mail className="w-5 h-5 mr-2" />
                 Send Email
               </a>

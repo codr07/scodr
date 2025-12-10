@@ -4,19 +4,19 @@ const skills = [
   {
     category: "Languages",
     icon: Code2,
-    items: ["Python", "TypeScript", "JavaScript", "SQL", "R"],
+    items: ["Python", "TypeScript", "JavaScript", "C/CPP", "C#" , "Cobalt", "RUBY", "Assembly", "JAVA", "HTML", "CSS", "Next.js and many more"],
     color: "primary" as const,
   },
   {
     category: "ML/AI",
     icon: Brain,
-    items: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision"],
+    items: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision", "Power Bi", "MatLab", "R"],
     color: "secondary" as const,
   },
   {
     category: "Data",
     icon: Database,
-    items: ["PostgreSQL", "MongoDB", "Redis", "Spark", "Pandas"],
+    items: ["PostgreSQL", "MongoDB", "Redis", "Spark", "Pandas", "Power BI", "MatLab"],
     color: "primary" as const,
   },
   {
@@ -34,7 +34,7 @@ const skills = [
   {
     category: "Tools",
     icon: Terminal,
-    items: ["Git", "Linux", "Jupyter", "VS Code", "Vim"],
+    items: ["Git", "Linux", "Jupyter", "VS Code", "Vim", "Google Colab", "SLACK"],
     color: "secondary" as const,
   },
 ];

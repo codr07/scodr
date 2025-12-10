@@ -106,21 +106,18 @@ const About = () => {
                   </h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                     <div>
-                      <p className="font-display text-3xl font-bold text-primary">3+</p>
+                      <p className="font-display text-3xl font-bold text-primary">6+</p>
                       <p className="text-sm text-muted-foreground">Years Experience</p>
                     </div>
                     <div>
-                      <p className="font-display text-3xl font-bold text-primary">50+</p>
+                      <p className="font-display text-3xl font-bold text-primary">30+</p>
                       <p className="text-sm text-muted-foreground">Projects</p>
                     </div>
                     <div>
                       <p className="font-display text-3xl font-bold text-primary">10+</p>
                       <p className="text-sm text-muted-foreground">Certifications</p>
                     </div>
-                    <div>
-                      <p className="font-display text-3xl font-bold text-primary">GDE</p>
-                      <p className="text-sm text-muted-foreground">Google Expert</p>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
