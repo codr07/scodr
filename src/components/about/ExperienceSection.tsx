@@ -18,16 +18,15 @@ export const ExperienceSection = () => {
                 className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all group"
               >
                 <div className="flex gap-4">
-                  <div className="w-14 h-14 rounded-lg bg-muted/50 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    {/* <img 
+                  {/* <div className="w-14 h-14 rounded-lg bg-muted/50 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img 
                       src={exp.logo} 
                       alt={exp.company}
                       className="w-10 h-10 object-contain"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
                       }}
-                    /> */}
-                  </div>
+                  </div> */}
                   
                   <div className="flex-1">
                     <div className="flex items-start justify-between">
