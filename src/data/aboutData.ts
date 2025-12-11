@@ -22,11 +22,11 @@ export const experience = [
   {
     title: "Chief Technology Officer",
     company: "EspoZ",
-    location: "India-123",
+    location: "India-124563",
     startDate: "January 2025",
     endDate: "Present",
     description: "Leading technical strategy and product development for innovative tech solutions.",
-    logo: "https://cdn-icons-png.flaticon.com/512/2103/2103832.png",
+    logo: "https://www.google.com/imgres?imgurl=https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D1%26w%3D500&tbnid=rq3vcutN5GNP8M&vet=1&imgrefurl=https://www.pexels.com/search/beautiful/&docid=B51x0PBR9KNzvM&w=500&h=667&source=sh/x/im/m1/0&kgs=bf8f8757e40d1da8&shem=shrtsdl&utm_source=shrtsdl,sh/x/im/m1/0",
   },
   {
     title: "Student Staff",
