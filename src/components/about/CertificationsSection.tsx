@@ -1,5 +1,5 @@
 import { certifications } from "@/data/aboutData";
-import { Award, ExternalLink } from "lucide-react";
+import { Award, BadgeCheck, Calendar } from "lucide-react";
 
 export const CertificationsSection = () => {
   return (
@@ -17,12 +17,33 @@ export const CertificationsSection = () => {
                 key={index}
                 className="p-4 rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all group"
               >
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors truncate">
-                    {cert.name}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                  <p className="text-xs text-primary font-mono">{cert.date}</p>
+                <div className="flex items-start gap-4">
+                  {/* Issuer Logo */}
+                  <div className="w-12 h-12 rounded-lg bg-muted/50 flex items-center justify-center shrink-0 border border-border overflow-hidden">
+                    {cert.logo ? (
+                      <img 
+                        src={cert.logo} 
+                        alt={cert.issuer} 
+                        className="w-8 h-8 object-contain"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                        }}
+                      />
+                    ) : null}
+                    <BadgeCheck className={`w-5 h-5 text-muted-foreground ${cert.logo ? 'hidden' : ''}`} />
+                  </div>
+                  
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                      {cert.name}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                    <p className="text-xs text-primary font-mono flex items-center gap-1 mt-1">
+                      <Calendar className="w-3 h-3" />
+                      {cert.date}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

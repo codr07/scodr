@@ -26,6 +26,7 @@ export const experience = [
     startDate: "January 2025",
     endDate: "Present",
     description: "Leading technical strategy and product development for innovative tech solutions.",
+    logo: "https://cdn-icons-png.flaticon.com/512/3281/3281289.png",
   },
   {
     title: "Student Staff",
@@ -34,6 +35,7 @@ export const experience = [
     startDate: "March 2024",
     endDate: "Present",
     description: "Contributing to statistical education and research initiatives.",
+    logo: "https://cdn-icons-png.flaticon.com/512/2103/2103832.png",
   },
   {
     title: "Developer",
@@ -42,6 +44,7 @@ export const experience = [
     startDate: "April 2024",
     endDate: "Present",
     description: "Building and learning cloud-native applications on Google Cloud Platform.",
+    logo: "https://www.gstatic.com/devrel-devsite/prod/v0e0f589edd85502a40d78d7d0825db8ea5ef3b99ab4070381ee86977c9168730/cloud/images/cloud-logo.svg",
   },
   {
     title: "Developer",

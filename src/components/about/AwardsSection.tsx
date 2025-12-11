@@ -1,5 +1,5 @@
 import { awards, recommendations, languages } from "@/data/aboutData";
-import { Trophy, MessageCircle, Globe } from "lucide-react";
+import { Trophy, MessageCircle, Globe, Medal, Calendar } from "lucide-react";
 
 export const AwardsSection = () => {
   return (
@@ -17,15 +17,25 @@ export const AwardsSection = () => {
               {awards.map((award, index) => (
                 <div 
                   key={index}
-                  className="p-4 rounded-lg border border-border bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-all"
+                  className="p-4 rounded-lg border border-border bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-all group"
                 >
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h4 className="font-semibold text-foreground">{award.title}</h4>
-                      <p className="text-sm text-primary">{award.organization}</p>
-                      <p className="text-sm text-muted-foreground mt-1">{award.description}</p>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Medal className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="text-xs font-mono text-muted-foreground">{award.year}</span>
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">{award.title}</h4>
+                          <p className="text-sm text-primary">{award.organization}</p>
+                          <p className="text-sm text-muted-foreground mt-1">{award.description}</p>
+                        </div>
+                        <span className="text-xs font-mono text-muted-foreground whitespace-nowrap flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          {award.year}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
