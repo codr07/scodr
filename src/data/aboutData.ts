@@ -20,7 +20,7 @@ ToolKit: GitHub, Slack, VS Code, Google Colab`,
 
 export const experience = [
   {
-    title: "Chief Technology Officer",
+    title: "Chief Technologygpkb Officer",
     company: "EspoZ",
     location: "India",
     startDate: "January 2025",
