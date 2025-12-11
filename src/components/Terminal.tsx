@@ -23,7 +23,7 @@ const BOOT_MESSAGES = [
   "[    0.005234] System ready.",
   "",
   "Welcome to Sankha Saha's Portfolio Terminal",
-  'Type "help" for available commands or click the buttons below.',
+  'Type "help" for available commands.',
 ];
 
 const NEOFETCH = `
@@ -150,11 +150,12 @@ export const Terminal = () => {
         
         let helpOutput = `<span class="text-primary">Available Commands:</span>\n`;
         defaultCmds.forEach(c => {
-          helpOutput += `  <span class="text-secondary">${c.cmd.padEnd(12)}</span> - ${c.desc}\n`;
+          helpOutput += `  <button class="text-secondary hover:text-primary hover:underline cursor-pointer cmd-btn" data-cmd="${c.cmd}">${c.cmd.padEnd(12)}</button> - ${c.desc}\n`;
         });
         customCmds.forEach(c => {
-          helpOutput += `  <span class="text-secondary">${c.command.padEnd(12)}</span> - ${c.description}\n`;
+          helpOutput += `  <button class="text-secondary hover:text-primary hover:underline cursor-pointer cmd-btn" data-cmd="${c.command}">${c.command.padEnd(12)}</button> - ${c.description}\n`;
         });
+        helpOutput += `\n<span class="text-muted-foreground">Click any command to run it.</span>`;
         setHistory(prev => [...prev, { type: "output", content: helpOutput, isHtml: true }]);
         break;
 
@@ -208,6 +209,13 @@ export const Terminal = () => {
       const projectName = target.getAttribute("data-project");
       if (projectName) {
         handleCommand(`cat ${projectName}`);
+      }
+      return;
+    }
+    if (target.classList.contains("cmd-btn")) {
+      const cmd = target.getAttribute("data-cmd");
+      if (cmd) {
+        handleCommand(cmd);
       }
       return;
     }
@@ -276,22 +284,6 @@ export const Terminal = () => {
           )}
         </div>
 
-        {/* Quick Command Buttons */}
-        {booted && (
-          <div className="px-4 py-3 bg-muted/30 border-t border-border">
-            <div className="flex flex-wrap gap-2">
-              {["help", "about", "projects", "contact", "clear"].map((cmd) => (
-                <button
-                  key={cmd}
-                  onClick={() => simulateCommand(cmd)}
-                  className="px-3 py-1.5 text-xs font-mono bg-card hover:bg-muted text-foreground rounded border border-border hover:border-primary transition-all hover:shadow-[0_0_10px_hsl(var(--primary)/0.3)]"
-                >
-                  {cmd}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
