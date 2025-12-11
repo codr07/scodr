@@ -77,3 +77,71 @@ export const ScrollReveal = ({
     </div>
   );
 };
+
+// Staggered list animation component
+interface StaggeredListProps {
+  children: React.ReactNode[];
+  className?: string;
+  staggerDelay?: number;
+  direction?: 'up' | 'down' | 'left' | 'right';
+}
+
+export const StaggeredList = ({
+  children,
+  className = '',
+  staggerDelay = 100,
+  direction = 'up'
+}: StaggeredListProps) => {
+  const { ref, isVisible } = useScrollAnimation();
+
+  const getTransform = () => {
+    switch (direction) {
+      case 'up': return 'translateY(40px)';
+      case 'down': return 'translateY(-40px)';
+      case 'left': return 'translateX(40px)';
+      case 'right': return 'translateX(-40px)';
+    }
+  };
+
+  return (
+    <div ref={ref as React.RefObject<HTMLDivElement>} className={className}>
+      {children.map((child, index) => (
+        <div
+          key={index}
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'none' : getTransform(),
+            transition: `opacity 0.5s ease-out ${index * staggerDelay}ms, transform 0.5s ease-out ${index * staggerDelay}ms`,
+          }}
+        >
+          {child}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+// Parallax hook for scroll-based effects
+export const useParallax = (speed: number = 0.5) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        const scrolled = window.scrollY;
+        const elementTop = rect.top + scrolled;
+        const relativeScroll = scrolled - elementTop + window.innerHeight;
+        setOffset(relativeScroll * speed);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [speed]);
+
+  return { ref, offset };
+};
