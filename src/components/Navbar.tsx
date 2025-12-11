@@ -55,7 +55,7 @@ export const Navbar = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <img src={codrLogo} alt="CODR Logo" className="w-10 h-10 object-contain" />
+            <img src={codrLogo} alt="CODR Logo" className="w-10 h-10 object-contain rounded-full" />
             <span className="font-display text-xl text-primary text-glow tracking-wider relative overflow-hidden">
               <span className={cn(
                 "inline-block transition-all duration-500",

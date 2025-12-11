@@ -26,7 +26,7 @@ export const experience = [
     startDate: "January 2025",
     endDate: "Present",
     description: "Leading technical strategy and product development for innovative tech solutions.",
-    logo: "https://cdn-icons-png.flaticon.com/512/3281/3281289.png",
+    logo: "/src/assets/espoz-logo.svg",
   },
   {
     title: "Student Staff",
