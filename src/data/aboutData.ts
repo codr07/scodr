@@ -26,7 +26,7 @@ export const experience = [
     startDate: "January 2025",
     endDate: "Present",
     description: "Leading technical strategy and product development for innovative tech solutions.",
-    logo: "/src/assets/EspoZ Logo Dark.png",
+    logo: "https://github.com/codr07/scodr/blob/e6fd3ff68460355cf1d7b59824f0a43dd012863f/src/assets/EspoZ%20Logo%20Dark.png",
   },
   {
     title: "Student Staff",
