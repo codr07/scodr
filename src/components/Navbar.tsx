@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import codrLogo from "@/assets/codr-logo.png";
 import { supabase } from "@/integrations/supabase/client";
 
-const navLinks = [
+const baseNavLinks = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/blog" },
   { name: "About", path: "/about" },
@@ -74,7 +74,7 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {baseNavLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -91,7 +91,7 @@ export const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            {isAdmin && (
+            {isAdmin ? (
               <Link
                 to="/admin"
                 className={cn(
@@ -106,6 +106,21 @@ export const Navbar = () => {
                 )}
                 <LayoutDashboard className="w-4 h-4" />
                 Admin
+              </Link>
+            ) : (
+              <Link
+                to="/auth"
+                className={cn(
+                  "relative font-mono text-sm uppercase tracking-widest transition-all duration-300",
+                  location.pathname === "/auth"
+                    ? "text-primary text-glow"
+                    : "text-muted-foreground hover:text-primary"
+                )}
+              >
+                {location.pathname === "/auth" && (
+                  <span className="absolute -left-4 text-primary">&gt;</span>
+                )}
+                Login
               </Link>
             )}
           </div>
@@ -124,7 +139,7 @@ export const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border animate-in slide-in-from-top-2">
-            {navLinks.map((link) => (
+            {baseNavLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -140,7 +155,7 @@ export const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            {isAdmin && (
+            {isAdmin ? (
               <Link
                 to="/admin"
                 onClick={() => setIsOpen(false)}
@@ -154,6 +169,20 @@ export const Navbar = () => {
                 <span className="text-primary mr-2">&gt;</span>
                 <LayoutDashboard className="w-4 h-4" />
                 Admin
+              </Link>
+            ) : (
+              <Link
+                to="/auth"
+                onClick={() => setIsOpen(false)}
+                className={cn(
+                  "block py-3 font-mono text-sm uppercase tracking-widest transition-all",
+                  location.pathname === "/auth"
+                    ? "text-primary text-glow"
+                    : "text-muted-foreground hover:text-primary hover:pl-4"
+                )}
+              >
+                <span className="text-primary mr-2">&gt;</span>
+                Login
               </Link>
             )}
           </div>
