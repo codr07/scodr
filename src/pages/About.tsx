@@ -93,7 +93,7 @@ const About = () => {
               {/* Bio */}
               <div className="lg:col-span-2 space-y-6">
                 <ScrollReveal delay={200} direction="right">
-                  <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
+                  <div className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
                     <h3 className="font-display text-xl font-semibold text-primary mb-4">
                       <span className="text-secondary">&gt;</span> Hello, World!
                     </h3>
