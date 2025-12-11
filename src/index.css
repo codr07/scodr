@@ -2,84 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Valorant Theme */
-    --background: 210 33% 11%;
-    --foreground: 40 14% 95%;
+    /* Dracula Theme */
+    --background: 231 15% 18%;
+    --foreground: 60 30% 96%;
 
-    --card: 210 33% 8%;
-    --card-foreground: 40 14% 95%;
+    --card: 232 14% 14%;
+    --card-foreground: 60 30% 96%;
 
-    --popover: 210 33% 8%;
-    --popover-foreground: 40 14% 95%;
+    --popover: 232 14% 14%;
+    --popover-foreground: 60 30% 96%;
 
-    --primary: 352 88% 62%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 135 94% 65%;
+    --primary-foreground: 231 15% 18%;
 
-    --secondary: 350 56% 49%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 191 97% 77%;
+    --secondary-foreground: 231 15% 18%;
 
-    --muted: 210 25% 18%;
-    --muted-foreground: 40 10% 70%;
+    --muted: 232 14% 25%;
+    --muted-foreground: 225 14% 68%;
 
-    --accent: 346 37% 39%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 326 100% 74%;
+    --accent-foreground: 231 15% 18%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 100% 67%;
+    --destructive-foreground: 60 30% 96%;
 
-    --border: 352 30% 30%;
-    --input: 352 30% 25%;
-    --ring: 352 88% 62%;
+    --border: 232 14% 30%;
+    --input: 232 14% 25%;
+    --ring: 135 94% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    /* Custom valorant colors */
-    --valorant-red: 352 88% 62%;
-    --valorant-dark-red: 350 56% 49%;
-    --valorant-maroon: 346 37% 39%;
-    --valorant-dark: 210 33% 11%;
-    --valorant-darker: 0 0% 0%;
-    --valorant-light: 40 14% 95%;
-    --valorant-white: 0 0% 100%;
+    /* Dracula colors */
+    --dracula-bg: 231 15% 18%;
+    --dracula-current: 232 14% 23%;
+    --dracula-fg: 60 30% 96%;
+    --dracula-comment: 225 14% 68%;
+    --dracula-cyan: 191 97% 77%;
+    --dracula-green: 135 94% 65%;
+    --dracula-orange: 31 100% 71%;
+    --dracula-pink: 326 100% 74%;
+    --dracula-purple: 265 89% 78%;
+    --dracula-red: 0 100% 67%;
+    --dracula-yellow: 65 92% 76%;
 
     /* Glow effects */
-    --glow-red: 0 0 20px hsl(352 88% 62% / 0.5), 0 0 40px hsl(352 88% 62% / 0.3);
-    --glow-text: 0 0 10px hsl(352 88% 62% / 0.8);
+    --glow-green: 0 0 20px hsl(135 94% 65% / 0.5), 0 0 40px hsl(135 94% 65% / 0.3);
+    --glow-text: 0 0 10px hsl(135 94% 65% / 0.8);
 
-    --sidebar-background: 210 33% 8%;
-    --sidebar-foreground: 40 14% 95%;
-    --sidebar-primary: 352 88% 62%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 346 37% 39%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 352 30% 25%;
-    --sidebar-ring: 352 88% 62%;
+    --sidebar-background: 232 14% 14%;
+    --sidebar-foreground: 60 30% 96%;
+    --sidebar-primary: 135 94% 65%;
+    --sidebar-primary-foreground: 231 15% 18%;
+    --sidebar-accent: 326 100% 74%;
+    --sidebar-accent-foreground: 231 15% 18%;
+    --sidebar-border: 232 14% 30%;
+    --sidebar-ring: 135 94% 65%;
   }
 
   .dark {
-    --background: 210 33% 11%;
-    --foreground: 40 14% 95%;
-    --card: 210 33% 8%;
-    --card-foreground: 40 14% 95%;
-    --popover: 210 33% 8%;
-    --popover-foreground: 40 14% 95%;
-    --primary: 352 88% 62%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 350 56% 49%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 210 25% 18%;
-    --muted-foreground: 40 10% 70%;
-    --accent: 346 37% 39%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 352 30% 25%;
-    --input: 352 30% 25%;
-    --ring: 352 88% 62%;
+    --background: 231 15% 18%;
+    --foreground: 60 30% 96%;
+    --card: 232 14% 14%;
+    --card-foreground: 60 30% 96%;
+    --popover: 232 14% 14%;
+    --popover-foreground: 60 30% 96%;
+    --primary: 135 94% 65%;
+    --primary-foreground: 231 15% 18%;
+    --secondary: 191 97% 77%;
+    --secondary-foreground: 231 15% 18%;
+    --muted: 232 14% 25%;
+    --muted-foreground: 225 14% 68%;
+    --accent: 326 100% 74%;
+    --accent-foreground: 231 15% 18%;
+    --destructive: 0 100% 67%;
+    --destructive-foreground: 60 30% 96%;
+    --border: 232 14% 30%;
+    --input: 232 14% 25%;
+    --ring: 135 94% 65%;
   }
 }
 
@@ -121,16 +125,20 @@
     text-shadow: var(--glow-text);
   }
 
-  .text-glow-red {
-    text-shadow: 0 0 10px hsl(352 88% 62% / 0.8);
+  .text-glow-green {
+    text-shadow: 0 0 10px hsl(135 94% 65% / 0.8);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 10px hsl(191 97% 77% / 0.8);
+  }
+
+  .text-glow-pink {
+    text-shadow: 0 0 10px hsl(326 100% 74% / 0.8);
   }
 
   .box-glow {
-    box-shadow: var(--glow-red);
-  }
-
-  .box-glow-red {
-    box-shadow: 0 0 20px hsl(352 88% 62% / 0.5), 0 0 40px hsl(352 88% 62% / 0.3);
+    box-shadow: var(--glow-green);
   }
 
   .neon-border {
@@ -138,66 +146,67 @@
     box-shadow: inset 0 0 10px hsl(var(--primary) / 0.1), 0 0 10px hsl(var(--primary) / 0.2);
   }
 
-  .neon-border-accent {
-    border: 1px solid hsl(var(--accent));
-    box-shadow: inset 0 0 10px hsl(var(--accent) / 0.1), 0 0 10px hsl(var(--accent) / 0.2);
-  }
-
   .terminal-text {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Fira Code', 'JetBrains Mono', monospace;
   }
 
-  .orbitron {
-    font-family: 'Orbitron', sans-serif;
-  }
-
-  .rajdhani {
-    font-family: 'Rajdhani', sans-serif;
-  }
-
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-
-  .animate-flicker {
-    animation: flicker 3s linear infinite;
-  }
-
-  .animate-typing {
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  }
-
-  .animate-scan {
-    animation: scan 8s linear infinite;
-  }
-
-  .gradient-text {
-    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .bg-grid {
-    background-image: 
-      linear-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-  }
-
-  .bg-scanlines {
+  /* CRT Scanline Effect */
+  .crt-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
     background: repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      hsl(var(--primary) / 0.03) 2px,
-      hsl(var(--primary) / 0.03) 4px
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
     );
   }
 
-  .valorant-clip {
-    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+  .crt-flicker {
+    animation: crt-flicker 0.15s infinite;
   }
+
+  /* Blinking cursor */
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  .typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(40, end);
+  }
+
+  /* Dracula specific colors */
+  .text-dracula-green { color: hsl(var(--dracula-green)); }
+  .text-dracula-cyan { color: hsl(var(--dracula-cyan)); }
+  .text-dracula-pink { color: hsl(var(--dracula-pink)); }
+  .text-dracula-purple { color: hsl(var(--dracula-purple)); }
+  .text-dracula-yellow { color: hsl(var(--dracula-yellow)); }
+  .text-dracula-orange { color: hsl(var(--dracula-orange)); }
+  .text-dracula-red { color: hsl(var(--dracula-red)); }
+  .text-dracula-comment { color: hsl(var(--dracula-comment)); }
+
+  .bg-dracula-current { background-color: hsl(var(--dracula-current)); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes crt-flicker {
+  0% { opacity: 0.97; }
+  50% { opacity: 1; }
+  100% { opacity: 0.98; }
 }
 
 @keyframes pulse-glow {
@@ -209,43 +218,15 @@
   }
 }
 
-@keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: 1;
-  }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-    opacity: 0.4;
-  }
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: hsl(var(--primary)) }
-}
-
-@keyframes scan {
-  0% {
-    background-position: 0 -100vh;
-  }
-  35%, 100% {
-    background-position: 0 100vh;
-  }
-}
-
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
 }

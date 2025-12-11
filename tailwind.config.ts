@@ -14,9 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        mono: ["JetBrains Mono", "monospace"],
-        display: ["Orbitron", "sans-serif"],
-        rajdhani: ["Rajdhani", "sans-serif"],
+        mono: ["Fira Code", "JetBrains Mono", "monospace"],
+        display: ["Fira Code", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,14 +51,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        valorant: {
-          red: "hsl(var(--valorant-red))",
-          "dark-red": "hsl(var(--valorant-dark-red))",
-          maroon: "hsl(var(--valorant-maroon))",
-          dark: "hsl(var(--valorant-dark))",
-          darker: "hsl(var(--valorant-darker))",
-          light: "hsl(var(--valorant-light))",
-          white: "hsl(var(--valorant-white))",
+        dracula: {
+          bg: "hsl(var(--dracula-bg))",
+          current: "hsl(var(--dracula-current))",
+          fg: "hsl(var(--dracula-fg))",
+          comment: "hsl(var(--dracula-comment))",
+          cyan: "hsl(var(--dracula-cyan))",
+          green: "hsl(var(--dracula-green))",
+          orange: "hsl(var(--dracula-orange))",
+          pink: "hsl(var(--dracula-pink))",
+          purple: "hsl(var(--dracula-purple))",
+          red: "hsl(var(--dracula-red))",
+          yellow: "hsl(var(--dracula-yellow))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -86,19 +89,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "border-beam": {
-          "100%": { "offset-distance": "100%" },
-        },
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "border-beam": "border-beam 4s linear infinite",
-        shimmer: "shimmer 2s linear infinite",
       },
     },
   },
