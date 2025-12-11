@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Terminal, LogIn, Loader2, ArrowLeft } from "lucide-react";
+import { Terminal, LogIn, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
@@ -69,10 +71,10 @@ const Auth = () => {
 
       if (error) throw error;
 
-      toast({ title: "Access granted!" });
+      toast({ title: "Welcome back!" });
     } catch (error: any) {
       toast({
-        title: "Authentication failed",
+        title: "Sign in failed",
         description: error.message,
         variant: "destructive",
       });
@@ -81,47 +83,29 @@ const Auth = () => {
     }
   };
 
-  const getCurrentDate = () => {
-    return new Date().toLocaleString("en-US", {
-      weekday: "short",
-      month: "short",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      year: "numeric"
-    });
-  };
-
   return (
-    <div className="min-h-screen bg-background flex flex-col relative">
-      {/* CRT Overlay */}
-      <div className="crt-overlay" />
-
-      {/* Header */}
-      <header className="p-4 border-b border-border bg-card/50">
-        <p className="text-sm text-muted-foreground font-mono">
-          Last login: {getCurrentDate()} on ttys000
-        </p>
-      </header>
-
-      <main className="flex-1 flex items-center justify-center p-4">
-        <div className="w-full max-w-md">
-          {/* Terminal Output */}
-          <div className="mb-6 font-mono text-sm">
-            <p className="text-primary">visitor@portfolio:~$ sudo login</p>
-            <p className="text-muted-foreground">[sudo] password required for admin access</p>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main className="pt-24 pb-16 flex items-center justify-center min-h-[80vh]">
+        <div className="w-full max-w-md px-4">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-lg border border-border bg-card/50">
+              <Terminal className="w-5 h-5 text-primary" />
+              <code className="text-sm text-muted-foreground">
+                <span className="text-primary">$</span> admin login
+              </code>
+            </div>
+            <h1 className="font-display text-4xl font-bold text-primary text-glow">
+              Admin Login
+            </h1>
+            <p className="text-muted-foreground text-sm mt-2">Restricted access</p>
           </div>
 
-          <div className="p-6 rounded border border-border bg-card/50">
-            <div className="flex items-center gap-2 mb-6">
-              <Terminal className="w-5 h-5 text-primary" />
-              <span className="font-mono text-primary text-glow">Authentication Required</span>
-            </div>
-
+          <div className="p-8 rounded-lg border border-border bg-card/50 backdrop-blur-sm neon-border">
             <form onSubmit={handleSignIn} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-muted-foreground font-mono text-sm">
-                  <span className="text-dracula-cyan">email</span>:
+                  email<span className="text-primary">:</span>
                 </Label>
                 <Input
                   id="email"
@@ -130,12 +114,12 @@ const Auth = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="admin@example.com"
                   required
-                  className="bg-background border-border focus:border-primary font-mono"
+                  className="bg-background border-border focus:border-primary"
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password" className="text-muted-foreground font-mono text-sm">
-                  <span className="text-dracula-cyan">password</span>:
+                  password<span className="text-primary">:</span>
                 </Label>
                 <Input
                   id="password"
@@ -144,7 +128,7 @@ const Auth = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   required
-                  className="bg-background border-border focus:border-primary font-mono"
+                  className="bg-background border-border focus:border-primary"
                 />
               </div>
               <Button type="submit" variant="neon" className="w-full" disabled={isLoading}>
@@ -153,19 +137,20 @@ const Auth = () => {
                 ) : (
                   <LogIn className="w-4 h-4 mr-2" />
                 )}
-                Authenticate
+                Sign In
               </Button>
             </form>
           </div>
 
-          <div className="mt-6 font-mono text-sm">
-            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" />
-              <span>cd ~/</span>
+          <p className="text-center text-muted-foreground text-sm mt-6 font-mono">
+            <span className="text-primary">//</span> Back to{" "}
+            <Link to="/" className="text-secondary hover:underline">
+              homepage
             </Link>
-          </div>
+          </p>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
