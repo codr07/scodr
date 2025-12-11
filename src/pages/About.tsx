@@ -10,6 +10,7 @@ import { AwardsSection } from "@/components/about/AwardsSection";
 import { profileInfo, socialLinks } from "@/data/aboutData";
 import { MapPin, Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
 import profilePhoto from "@/assets/profile-photo.png";
 
 const About = () => {
@@ -20,17 +21,19 @@ const About = () => {
         {/* Hero Section */}
         <section className="container mx-auto px-4 mb-16">
           <div className="max-w-6xl mx-auto">
-            <code className="text-sm text-muted-foreground font-mono">
-              <span className="text-primary">$</span> cat about.md
-            </code>
-            <h1 className="font-display text-5xl md:text-6xl font-bold mt-4 mb-6">
-              <span className="text-primary text-glow">About</span>{" "}
-              <span className="gradient-text">Me</span>
-            </h1>
+            <ScrollReveal>
+              <code className="text-sm text-muted-foreground font-mono">
+                <span className="text-primary">$</span> cat about.md
+              </code>
+              <h1 className="font-display text-5xl md:text-6xl font-bold mt-4 mb-6">
+                <span className="text-primary text-glow">About</span>{" "}
+                <span className="gradient-text">Me</span>
+              </h1>
+            </ScrollReveal>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
               {/* Profile Card */}
-              <div className="lg:col-span-1">
+              <ScrollReveal delay={100} direction="left">
                 <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm neon-border sticky top-24">
                   <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary">
                     <img src={profilePhoto} alt="Sankha Saha" className="w-full h-full object-cover" />
@@ -85,68 +88,86 @@ const About = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
 
               {/* Bio */}
               <div className="lg:col-span-2 space-y-6">
-                <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
-                  <h3 className="font-display text-xl font-semibold text-primary mb-4">
-                    <span className="text-secondary">&gt;</span> Hello, World!
-                  </h3>
-                  <div className="space-y-4 text-muted-foreground leading-relaxed whitespace-pre-line">
-                    {profileInfo.about}
+                <ScrollReveal delay={200} direction="right">
+                  <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
+                    <h3 className="font-display text-xl font-semibold text-primary mb-4">
+                      <span className="text-secondary">&gt;</span> Hello, World!
+                    </h3>
+                    <div className="space-y-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                      {profileInfo.about}
+                    </div>
                   </div>
-                </div>
+                </ScrollReveal>
 
                 {/* Featured Section */}
-                <div className="p-6 rounded-lg border border-primary/50 bg-primary/5 backdrop-blur-sm">
-                  <h3 className="font-display text-xl font-semibold text-primary mb-4">
-                    <span className="text-secondary">&gt;</span> Featured
-                  </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div>
-                      <p className="font-display text-3xl font-bold text-primary">6+</p>
-                      <p className="text-sm text-muted-foreground">Years Experience</p>
-                    </div>
-                    <div>
-                      <p className="font-display text-3xl font-bold text-primary">30+</p>
-                      <p className="text-sm text-muted-foreground">Projects</p>
-                    </div>
-                    <div>
-                      <p className="font-display text-3xl font-bold text-primary">10+</p>
-                      <p className="text-sm text-muted-foreground">Certifications</p>
-                    </div>
-                    <div>
-                      <p className="font-display text-3xl font-bold text-primary">GSD</p>
-                      <p className="text-sm text-muted-foreground">Google Student Dev</p>
+                <ScrollReveal delay={300} direction="right">
+                  <div className="p-6 rounded-lg border border-primary/50 bg-primary/5 backdrop-blur-sm">
+                    <h3 className="font-display text-xl font-semibold text-primary mb-4">
+                      <span className="text-secondary">&gt;</span> Featured
+                    </h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                      <div>
+                        <p className="font-display text-3xl font-bold text-primary">6+</p>
+                        <p className="text-sm text-muted-foreground">Years Experience</p>
+                      </div>
+                      <div>
+                        <p className="font-display text-3xl font-bold text-primary">30+</p>
+                        <p className="text-sm text-muted-foreground">Projects</p>
+                      </div>
+                      <div>
+                        <p className="font-display text-3xl font-bold text-primary">10+</p>
+                        <p className="text-sm text-muted-foreground">Certifications</p>
+                      </div>
+                      <div>
+                        <p className="font-display text-3xl font-bold text-primary">GSD</p>
+                        <p className="text-sm text-muted-foreground">Google Student Dev</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
               </div>
             </div>
           </div>
         </section>
 
         {/* Experience */}
-        <ExperienceSection />
+        <ScrollReveal>
+          <ExperienceSection />
+        </ScrollReveal>
 
         {/* Education */}
-        <EducationSection />
+        <ScrollReveal>
+          <EducationSection />
+        </ScrollReveal>
 
         {/* Skills Section */}
-        <SkillsSection />
+        <ScrollReveal>
+          <SkillsSection />
+        </ScrollReveal>
 
         {/* Certifications */}
-        <CertificationsSection />
+        <ScrollReveal>
+          <CertificationsSection />
+        </ScrollReveal>
 
         {/* Services */}
-        <ServicesSection />
+        <ScrollReveal>
+          <ServicesSection />
+        </ScrollReveal>
 
         {/* Projects */}
-        <ProjectsSection />
+        <ScrollReveal>
+          <ProjectsSection />
+        </ScrollReveal>
 
         {/* Awards & Recommendations */}
-        <AwardsSection />
+        <ScrollReveal>
+          <AwardsSection />
+        </ScrollReveal>
 
       </main>
       <Footer />
