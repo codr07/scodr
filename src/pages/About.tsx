@@ -34,7 +34,7 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
               {/* Profile Card */}
               <ScrollReveal delay={100} direction="left">
-                <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm neon-border sticky top-24">
+                <div className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm neon-border sticky top-24">
                   <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary">
                     <img src={profilePhoto} alt="Sankha Saha" className="w-full h-full object-cover" />
                   </div>
