@@ -4,11 +4,11 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { MarkdownEditor } from "@/components/MarkdownEditor";
 import { 
   Plus, Pencil, Trash2, Terminal, Save, X, 
   FileText, Eye, EyeOff, ArrowLeft, LogOut,
@@ -333,11 +333,10 @@ const AdminDashboard = () => {
                   </div>
                   <div>
                     <Label className="font-mono text-sm">Response</Label>
-                    <Textarea
+                    <MarkdownEditor
                       value={commandForm.response}
-                      onChange={(e) => setCommandForm(p => ({ ...p, response: e.target.value }))}
-                      placeholder="The output when command is run"
-                      className="bg-background border-border min-h-[80px]"
+                      onChange={(val) => setCommandForm(p => ({ ...p, response: val }))}
+                      placeholder="The output when command is run. Use [text](url) for links."
                     />
                   </div>
                   <div className="flex gap-2">
@@ -380,10 +379,10 @@ const AdminDashboard = () => {
                           </div>
                           <div>
                             <Label className="font-mono text-sm">Response</Label>
-                            <Textarea
+                            <MarkdownEditor
                               value={commandForm.response}
-                              onChange={(e) => setCommandForm(p => ({ ...p, response: e.target.value }))}
-                              className="bg-background border-border min-h-[80px]"
+                              onChange={(val) => setCommandForm(p => ({ ...p, response: val }))}
+                              placeholder="The output when command is run. Use [text](url) for links."
                             />
                           </div>
                           <div className="flex gap-2">

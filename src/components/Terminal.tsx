@@ -187,7 +187,11 @@ export const Terminal = () => {
             setHistory([]);
             return;
           }
-          setHistory(prev => [...prev, { type: "output", content: foundCommand.response }]);
+          // Convert markdown-style links to HTML and preserve line breaks
+          const formattedResponse = foundCommand.response
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" class="text-primary hover:underline cursor-pointer">$1</a>')
+            .replace(/\n/g, '<br/>');
+          setHistory(prev => [...prev, { type: "output", content: formattedResponse, isHtml: true }]);
         } else {
           setHistory(prev => [...prev, { 
             type: "error", 
