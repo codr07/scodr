@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown, MapPin, GraduationCap } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { useParallax } from "@/hooks/useScrollAnimation";
 
 const roles = [
   "Data Scientist",
@@ -14,6 +15,13 @@ export const HeroSection = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const role = roles[currentRole];
@@ -39,12 +47,39 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-grid overflow-hidden">
-      {/* Animated background elements */}
+      {/* Parallax background elements */}
       <div className="absolute inset-0 bg-scanlines pointer-events-none opacity-50" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div 
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+        style={{ transform: `translate(${scrollY * 0.1}px, ${scrollY * 0.15}px)` }}
+      />
+      <div 
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"
+        style={{ transform: `translate(${-scrollY * 0.08}px, ${scrollY * 0.12}px)` }}
+      />
+      <div 
+        className="absolute top-1/3 right-1/3 w-64 h-64 bg-accent/5 rounded-full blur-2xl"
+        style={{ transform: `translate(${scrollY * 0.05}px, ${-scrollY * 0.1}px)` }}
+      />
       
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      {/* Floating particles with parallax */}
+      <div 
+        className="absolute top-20 left-20 w-2 h-2 bg-primary/50 rounded-full"
+        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+      />
+      <div 
+        className="absolute top-40 right-32 w-3 h-3 bg-secondary/50 rounded-full"
+        style={{ transform: `translateY(${scrollY * 0.25}px)` }}
+      />
+      <div 
+        className="absolute bottom-40 left-32 w-2 h-2 bg-accent/50 rounded-full"
+        style={{ transform: `translateY(${scrollY * 0.2}px)` }}
+      />
+      
+      <div 
+        className="container mx-auto px-4 py-20 relative z-10"
+        style={{ transform: `translateY(${scrollY * 0.1}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           {/* Terminal-style intro */}
           <div className="inline-block mb-8 px-4 py-2 rounded-lg border border-border bg-card/50 backdrop-blur-sm">

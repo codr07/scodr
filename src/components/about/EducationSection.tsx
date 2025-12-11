@@ -1,5 +1,6 @@
 import { education } from "@/data/aboutData";
 import { GraduationCap, MapPin, Calendar, School } from "lucide-react";
+import { StaggeredList } from "@/hooks/useScrollAnimation";
 
 export const EducationSection = () => {
   return (
@@ -11,7 +12,7 @@ export const EducationSection = () => {
             <h3 className="font-display text-2xl font-bold text-foreground">Education</h3>
           </div>
           
-          <div className="space-y-6">
+          <StaggeredList className="space-y-6" staggerDelay={150}>
             {education.map((edu, index) => (
               <div 
                 key={index}
@@ -56,7 +57,7 @@ export const EducationSection = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </StaggeredList>
         </div>
       </div>
     </section>

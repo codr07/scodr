@@ -1,5 +1,6 @@
 import { experience } from "@/data/aboutData";
 import { Briefcase, Building2, MapPin, Calendar } from "lucide-react";
+import { StaggeredList } from "@/hooks/useScrollAnimation";
 
 export const ExperienceSection = () => {
   return (
@@ -11,7 +12,7 @@ export const ExperienceSection = () => {
             <h3 className="font-display text-2xl font-bold text-foreground">Experience</h3>
           </div>
           
-          <div className="space-y-6">
+          <StaggeredList className="space-y-6" staggerDelay={120}>
             {experience.map((exp, index) => (
               <div 
                 key={index}
@@ -56,7 +57,7 @@ export const ExperienceSection = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </StaggeredList>
         </div>
       </div>
     </section>
