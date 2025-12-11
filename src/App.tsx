@@ -11,7 +11,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
 import CreatePost from "./pages/CreatePost";
-import AdminCommands from "./pages/AdminCommands";
+import EditPost from "./pages/EditPost";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,7 +30,8 @@ const AppContent = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/create-post" element={<CreatePost />} />
-        <Route path="/admin/commands" element={<AdminCommands />} />
+        <Route path="/edit-post/:id" element={<EditPost />} />
+        <Route path="/admin" element={<AdminDashboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
