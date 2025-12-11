@@ -20,13 +20,13 @@ ToolKit: GitHub, Slack, VS Code, Google Colab`,
 
 export const experience = [
   {
-    title: "Chief Technologygpkb Officer",
+    title: "Chief Technology Officer",
     company: "EspoZ",
     location: "India",
     startDate: "January 2025",
     endDate: "Present",
     description: "Leading technical strategy and product development for innovative tech solutions.",
-    logo: "https://github.com/codr07/scodr/blob/main/src/assets/EspoZ%20Logo%20-%20Dark.svg",
+    logo: "https://share.google/MwuGG4ckQwdSc28Ep",
   },
   {
     title: "Student Staff",
