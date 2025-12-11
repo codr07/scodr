@@ -2,9 +2,10 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ArrowLeft, Calendar, Clock, Tag, Share2 } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Tag, Share2, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -102,7 +103,10 @@ const BlogPost = () => {
               size="sm"
               onClick={() => {
                 navigator.clipboard.writeText(window.location.href);
-                alert("Link copied to clipboard!");
+                toast.success("Link copied!", {
+                  description: "The blog post link has been copied to your clipboard.",
+                  icon: <Check className="w-4 h-4 text-terminal-green" />,
+                });
               }}
             >
               <Share2 className="w-4 h-4 mr-2" />Copy Link
