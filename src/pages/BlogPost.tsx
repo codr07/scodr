@@ -97,7 +97,16 @@ const BlogPost = () => {
 
           <div className="mt-16 pt-8 border-t border-border flex items-center justify-between">
             <span className="text-muted-foreground font-mono text-sm"><span className="text-primary">//</span> Thanks for reading!</span>
-            <Button variant="outline" size="sm"><Share2 className="w-4 h-4 mr-2" />Share</Button>
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => {
+                navigator.clipboard.writeText(window.location.href);
+                alert("Link copied to clipboard!");
+              }}
+            >
+              <Share2 className="w-4 h-4 mr-2" />Copy Link
+            </Button>
           </div>
         </article>
       </main>
