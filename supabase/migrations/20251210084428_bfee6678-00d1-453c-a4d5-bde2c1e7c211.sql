@@ -1,5 +1,5 @@
 -- Create blog_posts table
-CREATE TABLE public.blog_posts (
+CREATE TABLE blog_posts (
   id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
   author_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
   title TEXT NOT NULL,
