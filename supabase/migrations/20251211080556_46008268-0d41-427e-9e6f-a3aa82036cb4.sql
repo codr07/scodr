@@ -1,5 +1,5 @@
 -- Create terminal_commands table
-CREATE TABLE public.terminal_commands (
+CREATE TABLE terminal_commands (
     id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
     command TEXT NOT NULL UNIQUE,
     description TEXT NOT NULL,
